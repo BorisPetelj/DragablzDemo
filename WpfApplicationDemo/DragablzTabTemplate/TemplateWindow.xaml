@@ -1,0 +1,23 @@
+﻿<dragablz:DragablzWindow x:Class="C_Client.Pregledi.Meni.DragablzTabTemplate.TemplateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:dockablz="clr-namespace:Dragablz.Dockablz;assembly=Dragablz"
+        Title="TemplateWindow" Height="300" Width="300">
+    <dockablz:Layout>
+        <dockablz:Layout.BranchTemplate>
+            <DataTemplate>
+                <dragablz:TabablzControl ConsolidateOrphanedItems="True">
+                    <dragablz:TabablzControl.InterTabController>
+                        <dragablz:InterTabController InterTabClient="{Binding TabTemplate}" />
+                    </dragablz:TabablzControl.InterTabController>
+                </dragablz:TabablzControl>
+            </DataTemplate>
+        </dockablz:Layout.BranchTemplate>
+        <dragablz:TabablzControl x:Name="TabablzControl" AddLocationHint="After">
+            <dragablz:TabablzControl.InterTabController>
+                <dragablz:InterTabController InterTabClient="{Binding TabTemplate}"/>
+            </dragablz:TabablzControl.InterTabController>
+        </dragablz:TabablzControl>
+    </dockablz:Layout>
+</dragablz:DragablzWindow>

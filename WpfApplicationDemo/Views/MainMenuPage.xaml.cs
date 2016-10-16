@@ -1,4 +1,5 @@
-﻿using C_Client.Servisi;
+﻿using C_Client.Pregledi.Meni.DragablzTabTemplate;
+using C_Client.Servisi;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -22,11 +23,13 @@ namespace C_Client.Pregledi.Meni
     public partial class MainMenuPage : Page
     {
         public DataTable myDT { get; set; }
+        public TabTemplateClient TabTemplate { get; set; }
 
         public MainMenuPage()
         {
             InitializeComponent();
             myDT = GetDT();
+            TabTemplate = new TabTemplateClient();
             this.DataContext = this;
         }
 

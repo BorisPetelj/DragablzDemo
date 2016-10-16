@@ -13,7 +13,7 @@
     <dockablz:Layout>
        <dragablz:TabablzControl ConsolidateOrphanedItems="True" AllowDrop="True" IsSynchronizedWithCurrentItem="True" Margin="0,10,0,0">
             <dragablz:TabablzControl.InterTabController >
-                <dragablz:InterTabController />
+                <dragablz:InterTabController InterTabClient="{Binding TabTemplate}"/>
             </dragablz:TabablzControl.InterTabController>
             <TabItem Header="Tab1">
                 <DataGrid ItemsSource="{Binding myDT}" Margin="10,20,10,0"
